@@ -107,3 +107,63 @@ footer span{color:var(--accent)}
   .hero{padding:5rem 1.5rem 4rem}
   section{padding:4rem 1.5rem}
 }
+
+
+/* HERO IMAGE */
+.hero-image {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-image-frame {
+  width: 220px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: var(--card);
+
+  /* Borde degradado con glow verde */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 0 0 2px #39d98a,
+    0 0 24px rgba(57, 217, 138, 0.25),
+    0 0 60px rgba(57, 217, 138, 0.08);
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.hero-image-frame:hover img {
+  filter: grayscale(0%);
+}
+
+/* Overlay sutil con degradado abajo */
+.hero-image-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to top, rgba(10,10,15,0.5), transparent);
+  pointer-events: none;
+}
+
+/* Detalle decorativo: línea lateral */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #39d98a, transparent);
+}
+
+
