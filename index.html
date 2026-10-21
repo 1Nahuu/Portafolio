@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nahuel Vailati — Desarrollador Backend Java</title>
+<meta name="description" content="Portafolio de Nahuel Vailati, estudiante de Ingeniería en Sistemas orientado al desarrollo backend con Java, Spring Boot y PostgreSQL. Proyectos, habilidades y contacto.">
+<meta name="author" content="Nahuel Vailati">
+<meta name="theme-color" content="#0a0a0f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Portafolio de Nahuel Vailati">
+<meta property="og:title" content="Nahuel Vailati — Desarrollador Backend Java">
+<meta property="og:description" content="Estudiante de Ingeniería en Sistemas orientado al desarrollo backend con Java, Spring Boot y PostgreSQL.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" sizes="32x32" href="icono.png">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Marca de que hay JavaScript: si el script falla, el contenido no queda oculto -->
+<script>
+  document.documentElement.classList.add('js');
+  // Red de seguridad: si app.js no llega a cargarse, se quita la clase
+  // para que el contenido quede visible y no dependa del JavaScript.
+  setTimeout(function () {
+    if (!window.portafolioListo) {
+      document.documentElement.classList.remove('js');
+    }
+  }, 1500);
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo" id="nav-logo">Nahuel Vailati</div>
+  <div class="nav-links">
+    <ul>
+      <li><a href="#sobre-mi">sobre_mi</a></li>
+      <li><a href="#habilidades">habilidades</a></li>
+      <li><a href="#proyectos">proyectos</a></li>
+      <li><a href="#formacion">formación</a></li>
+      <li><a href="#contacto">contacto</a></li>
+    </ul>
+    <!-- Indicador que se mueve a la sección visible -->
+    <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+  </div>
+  <!-- Barra de progreso de lectura -->
+  <span class="nav-progress" id="nav-progress" aria-hidden="true"><i></i></span>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-inner">
+  <div class="hero-text">
+    <p class="hero-tag">disponible para proyectos</p>
+    <h1>
+      <span class="name">Hola, soy</span>
+      <span class="role"><span class="type" data-type="Nahuel Vailati">Nahuel Vailati</span></span>
+    </h1>
+    <p class="hero-desc">Estudiante de Ingeniería en Sistemas orientado al desarrollo de software y tecnologías backend. Apasionado por la programación, el aprendizaje continuo y la creación de soluciones tecnológicas.</p>
+    <div class="hero-cta">
+      <a href="#proyectos" class="btn btn-primary">ver proyectos</a>
+      <a href="#contacto" class="btn btn-ghost">escribime</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="hero-image-frame" data-tilt>
+      <img src="2.jpg" alt="Nahuel">
+    </div>
+  </div>
+</div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</div>
+
+<div class="full-divider fade-in"></div>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <p class="section-label fade-in">01 // sobre_mi</p>
+  <h2 class="fade-in"><span class="mask">¿Quién soy?</span></h2>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <div class="status-badge"><span class="dot"></span>open to work</div>
+      <p>Soy estudiante de Ingeniería en Sistemas, apasionado por el desarrollo de software y la tecnología. Me interesa especialmente el desarrollo backend con Java y bases de datos, aunque también disfruto crear interfaces web modernas y dinámicas.</p>
+      <p>Trabajé con tecnologías como Java, Spring Boot, PostgreSQL, HTML, CSS y JavaScript, además de herramientas como Git y GitHub. También en proyectos de redes e infraestructura, realizando configuración de dispositivos y de conectividad.</p>
+      <p>Además, cuento con conocimientos en metodologías ágiles como Scrum, comprendiendo dinámicas de trabajo colaborativo, organización de tareas y desarrollo dentro de equipos de trabajo.</p>
+      <p>Me considero una persona comprometida, con ganas de seguir aprendiendo constantemente y enfrentar nuevos desafíos tecnológicos, buscando siempre mejorar mis habilidades.</p>
+      <a href="#contacto" class="btn btn-ghost about-cta">contactarme →</a>
+    </div>
+    <ul class="info-list fade-in">
+      <li><span class="key">ubicación</span><span class="val">Argentina 🇦🇷</span></li>
+      <li><span class="key">perfil</span><span class="val">junior · proyectos propios</span></li>
+      <li><span class="key">especialidad</span><span class="val">Backend Developer (Java)</span></li>
+      <li><span class="key">stack</span><span class="val">Java</span></li>
+      <li><span class="key">disponibilidad</span><span class="val">freelance / fulltime</span></li>
+      <li><span class="key">idiomas</span><span class="val">ES / EN</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="full-divider fade-in"></div>
+
+<!-- HABILIDADES -->
+<section id="habilidades">
+  <p class="section-label fade-in">02 // habilidades</p>
+  <h2 class="fade-in"><span class="mask">Stack técnico</span></h2>
+  <p class="skills-intro fade-in">Herramientas que uso en mis proyectos y en la facultad, ordenadas por categoría.</p>
+  <div class="skills-list">
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">lenguajes</div>
+      <div class="skill-group-items">Java · JavaScript · Python · SQL</div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">frameworks</div>
+      <div class="skill-group-items">Spring Boot</div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">bases de datos</div>
+      <div class="skill-group-items">PostgreSQL</div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">web</div>
+      <div class="skill-group-items">HTML · CSS · APIs REST</div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">herramientas</div>
+      <div class="skill-group-items">Git · GitHub · Docker · Scrum</div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-label">cloud</div>
+      <div class="skill-group-items">AWS <span class="skill-group-note">conocimientos básicos</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider fade-in"></div>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <p class="section-label fade-in">03 // proyectos</p>
+  <h2 class="fade-in"><span class="mask">Lo que construí</span></h2>
+  <div class="projects-list">
+    <!-- proyecto con enlaces: se pueden agregar más <a> dentro de .project-links -->
+    <article class="project-card fade-in">
+      <div class="project-num">proyecto 1</div>
+      <h3 class="project-title">Sistema Web para Regalería Paris</h3>
+      <div class="project-desc">Desarrollé un sistema web orientado a la gestión y visualización de productos para una regalería. El proyecto incluye una interfaz moderna realizada con HTML, CSS y JavaScript, junto con lógica backend en Java. Trabajé en la estructura de navegación, diseño responsive y organización de productos, buscando mejorar la experiencia del usuario y facilitar la administración del emprendimiento.</div>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://1nahuu.github.io/RegaleriaWeb/frontend/Principal.html" target="_blank" rel="noopener noreferrer">ver demo</a>
+        <a class="project-link" href="https://github.com/1Nahuu/RegaleriaWeb" target="_blank" rel="noopener noreferrer">ver código</a>
+      </div>
+    </article>
+
+    <!-- proyectos sin enlace: agregar .project-links cuando haya repo o demo -->
+    <article class="project-card fade-in">
+      <div class="project-num">proyecto 2</div>
+      <h3 class="project-title">Portfolio Web Personal</h3>
+      <div class="project-desc">Desarrollé un portfolio web personal con el objetivo de presentar mis proyectos, habilidades y conocimientos en desarrollo de software. El sitio fue diseñado utilizando HTML, CSS y JavaScript, priorizando una interfaz moderna, responsive y dinámica.</div>
+      <div class="tags">
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </article>
+
+    <article class="project-card fade-in">
+      <div class="project-num">proyecto 3</div>
+      <h3 class="project-title">Sistema de Gestión de Comprobantes y Clientes</h3>
+      <div class="project-desc">Realicé un proyecto enfocado en el manejo de comprobantes, clientes y servicios utilizando PostgreSQL. Implementé consultas SQL avanzadas y Triggers para optimizar la administración de datos y mejorar la eficiencia en las operaciones.</div>
+      <div class="tags">
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Triggers</span>
+      </div>
+    </article>
+
+    <article class="project-card fade-in">
+      <div class="project-num">proyecto 4</div>
+      <h3 class="project-title">Proyecto 24hs de Innovación</h3>
+      <div class="project-desc">Participé en el evento 24hs de Innovación, trabajando en equipo para desarrollar una propuesta tecnológica dentro de un tiempo limitado. Durante el proyecto participé en la planificación y desarrollo del prototipo de una aplicación orientada a mejorar la comunicación interna de una PyME, diseñando la estructura y funcionalidades principales de la solución. </div>
+      <div class="tags">
+        <span class="tag">Backend</span>
+        <span class="tag">Frontend</span>
+      </div>
+    </article>
+
+    <article class="project-card fade-in">
+      <div class="project-num">proyecto 5</div>
+      <h3 class="project-title">Proyecto de Infraestructura y Redes</h3>
+      <div class="project-desc">Participé en el diseño y organización de una infraestructura de red en la secundaria, contemplando switches, redes WiFi, servidores y segmentación de dispositivos. También trabajé en la configuración de dispositivos de red, incluyendo routers, switches y asignación de direcciones IP, aplicando conceptos de conectividad, administración y optimización de la red.</div>
+      <div class="tags">
+        <span class="tag">Diseño de infraestructura</span>
+        <span class="tag">Segmentación de red</span>
+        <span class="tag">Servidores y WiFi</span>
+        <span class="tag">IPv4 / IPv6</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="full-divider fade-in"></div>
+
+<!-- FORMACIÓN -->
+<section id="formacion">
+  <p class="section-label fade-in">04 // formación</p>
+  <h2 class="fade-in"><span class="mask">Formación</span></h2>
+  <div class="formacion-grid">
+    <article class="formacion-card fade-in">
+      <div class="formacion-kicker">universidad</div>
+      <h3 class="formacion-title">Ingeniería en Sistemas</h3>
+      <div class="formacion-place">Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)</div>
+      <div class="formacion-note">5to año en curso</div>
+    </article>
+    <article class="formacion-card fade-in">
+      <div class="formacion-kicker">secundaria técnica</div>
+      <h3 class="formacion-title">Técnico en Informática</h3>
+      <div class="formacion-place">Orientación Persona y Profesional</div>
+      <div class="formacion-note">egresado</div>
+    </article>
+  </div>
+
+  <p class="formacion-subtitulo fade-in">Cursos de inteligencia artificial · BIG School</p>
+  <div class="formacion-grid">
+    <article class="formacion-card fade-in">
+      <div class="formacion-kicker">curso</div>
+      <h3 class="formacion-title">Prompt Engineering para desarrolladores</h3>
+      <ul class="curso-temas">
+        <li>Diseñar prompts técnicos para obtener código de calidad en minutos.</li>
+        <li>Definir proyectos con el apoyo de un equipo de expertos de IA.</li>
+        <li>Automatizar procesos de programación con herramientas de inteligencia artificial.</li>
+      </ul>
+      <div class="formacion-meta">
+        <span class="formacion-cert">Certificado: Curso de Iniciación al Desarrollo con IA</span>
+        <a class="curso-link" href="certificados/1760024408730.jpg" target="_blank" rel="noopener noreferrer">ver certificado</a>
+      </div>
+    </article>
+    <article class="formacion-card fade-in">
+      <div class="formacion-kicker">curso</div>
+      <h3 class="formacion-title">Desarrollo con IA: de O a Producción</h3>
+      <ul class="curso-temas">
+        <li>Fundamentos de LLMs y su aplicación en el desarrollo de software.</li>
+        <li>Flujos de trabajo con agentes de IA.</li>
+        <li>Prácticas de CI/CD para llevar proyectos a producción de forma segura.</li>
+      </ul>
+      <div class="formacion-meta">
+        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-t332qt3b-D0AP.pdf" target="_blank" rel="noopener noreferrer">ver certificado</a>
+      </div>
+    </article>
+    <article class="formacion-card fade-in">
+      <div class="formacion-kicker">curso</div>
+      <h3 class="formacion-title">El Nuevo Programador</h3>
+      <ul class="curso-temas">
+        <li>Programar con criterio y metodologías profesionales, más allá del vibe coding.</li>
+        <li>SDD y CDD: desarrollo basado en especificaciones para evitar alucinaciones del modelo.</li>
+        <li>MCP, Agent Skills y orquestación multiagente (planificador, implementador y revisor).</li>
+      </ul>
+      <div class="formacion-meta">
+        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-cd7ebo4b-ENP.pdf" target="_blank" rel="noopener noreferrer">ver certificado</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="full-divider fade-in"></div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <p class="section-label fade-in">05 // contacto</p>
+  <h2 class="fade-in"><span class="mask">Hablemos</span></h2>
+  <div class="contact-inner fade-in">
+    <h3 class="contact-title">¿Tenés un proyecto en mente?</h3>
+    <p class="contact-text">Estoy disponible para proyectos freelance, posiciones full-time y colaboraciones interesantes. Si tenés una idea, escribime.</p>
+    <a href="mailto:nahuelvailati@gmail.com" class="btn btn-primary contact-email">nahuelvailati@gmail.com</a>
+    <div class="contact-links">
+      <a href="https://github.com/1Nahuu" target="_blank" rel="noopener noreferrer" class="contact-link">github</a>
+      <a href="https://www.linkedin.com/in/nahuel-vailati-706a27226/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin</a>
+      <a href="https://wa.link/9pmgxb" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp</a>
+      <a href="CV_Nahuel_Vailati_.6f.pdf" download="CV Nahuel Vailati.pdf" class="contact-link">descargar cv</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  construido con <span>♥</span> · 2026
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
