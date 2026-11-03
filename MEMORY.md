@@ -5,6 +5,8 @@
 - Web estática: `index.html` + `style.css` + `app.js`. Funciona con doble clic (`file://`).
 - Diseño: **secciones con tarjetas**, tipografías Syne (títulos) y JetBrains Mono
   (etiquetas), paleta oscura con acento verde.
+- Habilidades: 6 tarjetas chicas + **1 tarjeta ancha** (`--wide`) de "ia & agentes"
+  con el mismo formato de texto (`·`) que las demás.
 - Se intentó un rediseño editorial (tipo dossier, sin tarjetas, barra lateral lateral)
   el [fecha de esta sesión] y **no fue del agrado del usuario: se volvió atrás**.
   No volver a proponer esa dirección sin que la pida explícitamente.
@@ -39,6 +41,9 @@
   (`--accent-hover`): oscurecerlo daba 3.5:1.
 - Habilidades **sin barras de porcentaje** (autoinventario). Lista agrupada por
   categoría (`.skill-group`); AWS lleva la nota "conocimientos básicos".
+- La tarjeta de IA va **última y ancha** (`grid-column:1/-1`), con el mismo formato
+  de lista que las otras categorías; sin RAG ni Agentic Workflows (no tienen respaldo
+  en los cursos) y sin notas de nivel.
 - Proyectos **no son enlaces**: son `<article>` con los enlaces adentro
   (`.project-links`), para poder tener demo y repo sin anidar `<a>`.
 - Formación en dos rejillas: títulos (universidad + secundaria) y los 3 cursos.
@@ -69,8 +74,8 @@
 - Los certificados venían con RunLengthDecode (8-9 MB). Ya se recomprimieron a
   FlateDecode (~280 KB) verificando que las imágenes son idénticas. Si se vuelven a
   descargar de BIG School, repetir el procedimiento.
-- **No hay control de versiones en este proyecto.** Antes de una reescritura grande,
-  hacer una copia de `index.html`, `style.css` y `app.js`, o inicializar git.
+- **Ya hay git** (últimos commits: `cec0343`, `dd5ffb0`). Antes de una reescritura
+  grande, commitear primero para poder volver atrás.
 
 ## Pendientes
 

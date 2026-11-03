@@ -6,7 +6,7 @@ Web estática para presentar mi perfil profesional, habilidades técnicas, proye
 
 - HTML, CSS y JavaScript puros: sin frameworks, librerías, npm, bundlers ni procesos de build.
 - `index.html`: estructura y contenido de la página.
-- `styles.css`: diseño visual, colores, tipografía, animaciones y responsive.
+- `style.css`: diseño visual, colores, tipografía, animaciones y responsive.
 - `app.js`: interacciones y funcionalidades de la interfaz.
 - La web debe funcionar abriendo `index.html` con doble clic (`file://`).
 - No utilizar módulos ES (`type="module"`), `fetch` a archivos locales ni funcionalidades que requieran un servidor.
@@ -23,7 +23,7 @@ El diseño debe transmitir profesionalismo, claridad y una orientación hacia el
 
 - **Inicio:** nombre, presentación breve, perfil como desarrollador y botones para explorar proyectos o contactarme.
 - **Sobre mí:** estudiante del último año de Ingeniería en Sistemas en la Universidad Nacional del Centro de la Provincia de Buenos Aires. Interés en el desarrollo de software, aprendizaje continuo y búsqueda de mi primera oportunidad laboral en tecnología.
-- **Habilidades técnicas:** Java, Spring Boot, SQL, PostgreSQL, APIs REST, HTML, CSS, JavaScript, Python, Git, GitHub, Docker y conocimientos de AWS. Mostrar las tecnologías de forma clara, sin exagerar el nivel de experiencia.
+- **Habilidades técnicas:** Java, Spring Boot, SQL, PostgreSQL, APIs REST, HTML, CSS, JavaScript, Python, Git, GitHub, Docker y conocimientos de AWS. Incluir una categoría de IA y desarrollo agéntico (Prompt Engineering, AI-Assisted Development, AI Coding Agents, Context Engineering, Harness, MCP, Agent Skills, CLI Tools, SDD). Mostrar las tecnologías de forma clara, sin exagerar el nivel de experiencia y sin declarar niveles que el usuario no haya indicado.
 - **Proyectos:** mostrar proyectos académicos y personales con nombre, descripción, tecnologías utilizadas, funcionalidades principales y enlaces disponibles a GitHub o a una demo.
 - **Formación:** carrera universitaria, cursos y certificaciones relevantes.
 - **Contacto:** enlaces a LinkedIn, GitHub y correo electrónico, utilizando los datos reales que proporcione el usuario.
@@ -67,6 +67,7 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 - Agregar comentarios únicamente cuando ayuden a entender decisiones o lógica no evidente.
 - No modificar partes funcionales sin una razón concreta.
 - No incluir información personal sensible ni credenciales en el código.
+- Las categorías de habilidades usan todas el mismo formato de lista en texto (`·`); una categoría destacada puede ocupar el ancho completo de la grilla, sin agregar descripciones por ítem.
 
 ## Contenido y perfil profesional
 

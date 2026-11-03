@@ -75,12 +75,14 @@ h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-0.02em;mar
 
 /* SKILLS */
 .skills-intro{font-size:0.9rem;color:var(--muted);line-height:1.7;margin:-2rem 0 2.5rem;max-width:560px}
-.skills-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.skills-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1rem}
 .skill-group{display:flex;align-items:baseline;gap:1.25rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;transition:border-color 0.2s}
 .skill-group:hover{border-color:var(--accent)}
 .skill-group-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--green);letter-spacing:0.12em;text-transform:uppercase;flex-shrink:0;min-width:118px}
 .skill-group-items{font-size:0.9rem;color:var(--text);line-height:1.6}
 .skill-group-note{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)}
+/* Categoría ancha: mismo formato que las demás, ocupando toda la grilla */
+.skill-group--wide{grid-column:1/-1}
 
 /* PROJECTS */
 .projects-list{display:flex;flex-direction:column;gap:1.5rem}
