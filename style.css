@@ -91,6 +91,9 @@ h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-0.02em;mar
 .project-num{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted);margin-bottom:0.75rem;letter-spacing:0.1em}
 .project-title{font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;color:var(--text)}
 .project-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;font-weight:400}
+/* Nota de alcance o estado del proyecto, destacada sin competir con la descripción */
+.project-note{margin:-0.25rem 0 1rem;padding:0.55rem 0.8rem;border-left:2px solid var(--accent);border-radius:0 6px 6px 0;background:var(--accent-soft);font-size:0.8rem;line-height:1.6;color:var(--muted)}
+.project-note strong{color:var(--accent);font-weight:700}
 .tags{display:flex;flex-wrap:wrap;gap:0.5rem}
 .tag{font-family:'JetBrains Mono',monospace;font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:4px;background:var(--accent-soft);color:var(--green);border:1px solid rgba(57,217,138,0.22)}
 /* Enlaces del proyecto (demo, código, certificado) */

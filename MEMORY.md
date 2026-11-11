@@ -57,7 +57,12 @@
 - Cursos de BIG School, cada uno con su certificado en `certificados/`: Prompt
   Engineering para desarrolladores (el certificado real dice "Curso de Iniciación al
   Desarrollo con IA", se aclara abajo), "De O a Producción" y "El Nuevo Programador".
-- Proyecto 1 (Regalería Paris) tiene demo y repo en GitHub, ambos verificados.
+- Proyecto 1 = **BarberTrend AI** (reservas para barbería, Java/Spring Boot): repo
+  `github.com/1Nahuu/barbertrend-ai`, sin demo. Descripción resumida en
+  `.project-desc`, sin pruebas ni lista de features (pedido del usuario). La segunda
+  etapa de IA va aparte en un `p.project-note` (borde verde + "Segunda etapa:" en
+  negrita) y se aclara que está planificada, no implementada.
+- Proyecto 2 (Regalería Paris) tiene demo y repo en GitHub, ambos verificados.
 - CV que se descarga: `CV_Nahuel_Vailati_.6f.pdf`; el "1.4" es viejo.
 
 ## Errores a evitar
@@ -79,7 +84,7 @@
 
 ## Pendientes
 
-- [ ] Enlaces de los proyectos 2 a 5 (los pega el usuario).
+- [ ] Enlaces de los proyectos 3 a 6 (los pega el usuario).
 - [ ] Navegación móvil: en ≤680px el menú del nav se oculta y no hay alternativa.
 - [ ] Enlace "saltar al contenido".
 - [ ] Achicar `icono.png` (775 KB) y `2.jpg` (183 KB).
