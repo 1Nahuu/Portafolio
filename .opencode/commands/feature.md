@@ -1,10 +1,10 @@
- ---
+---
 description: Planifica una nueva funcionalidad antes de tocar código
 agent: plan
-3
-None
 ---
-Quiero añadir esta funcionalidad: $ARGUMENTS
+
+añadir esta funcionalidad: $ARGUMENTS
+
 Antes de escribir código, prepárame un plan con:
 1. Cómo la vas a implementar, respetando las reglas de AGENTS.md.
 2. Qué archivos vas a modificar y qué cambia en cada uno.
