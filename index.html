@@ -34,14 +34,19 @@
   <div class="logo" id="nav-logo">Nahuel Vailati</div>
   <div class="nav-links">
     <ul>
-      <li><a href="#sobre-mi">sobre_mi</a></li>
-      <li><a href="#habilidades">habilidades</a></li>
-      <li><a href="#proyectos">proyectos</a></li>
-      <li><a href="#formacion">formación</a></li>
-      <li><a href="#contacto">contacto</a></li>
+      <li><a href="#sobre-mi" data-en="about_me">sobre_mi</a></li>
+      <li><a href="#habilidades" data-en="skills">habilidades</a></li>
+      <li><a href="#proyectos" data-en="projects">proyectos</a></li>
+      <li><a href="#formacion" data-en="education">formación</a></li>
+      <li><a href="#contacto" data-en="contact">contacto</a></li>
     </ul>
     <!-- Indicador que se mueve a la sección visible -->
     <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+  </div>
+  <!-- Selector de idioma: el español es el idioma base de la página -->
+  <div class="lang-switch" id="lang-switch" role="group" aria-label="Idioma de la página">
+    <button type="button" data-idioma="es" lang="es" aria-label="Español" aria-pressed="true">ES</button>
+    <button type="button" data-idioma="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
   </div>
   <!-- Barra de progreso de lectura -->
   <span class="nav-progress" id="nav-progress" aria-hidden="true"><i></i></span>
@@ -51,15 +56,15 @@
 <div class="hero">
     <div class="hero-inner">
   <div class="hero-text">
-    <p class="hero-tag">disponible para proyectos</p>
+    <p class="hero-tag" data-en="available for projects">disponible para proyectos</p>
     <h1>
-      <span class="name">Hola, soy</span>
+      <span class="name" data-en="Hi, I'm">Hola, soy</span>
       <span class="role"><span class="type" data-type="Nahuel Vailati">Nahuel Vailati</span></span>
     </h1>
-    <p class="hero-desc">Estudiante de Ingeniería en Sistemas orientado al desarrollo de software y tecnologías backend. Apasionado por la programación, el aprendizaje continuo y la creación de soluciones tecnológicas.</p>
+    <p class="hero-desc" data-en="Systems Engineering student focused on software development and backend technologies. Passionate about programming, continuous learning, and building technology solutions.">Estudiante de Ingeniería en Sistemas orientado al desarrollo de software y tecnologías backend. Apasionado por la programación, el aprendizaje continuo y la creación de soluciones tecnológicas.</p>
     <div class="hero-cta">
-      <a href="#proyectos" class="btn btn-primary">ver proyectos</a>
-      <a href="#contacto" class="btn btn-ghost">escribime</a>
+      <a href="#proyectos" class="btn btn-primary" data-en="view projects">ver proyectos</a>
+      <a href="#contacto" class="btn btn-ghost" data-en="get in touch">escribime</a>
     </div>
   </div>
 
@@ -79,24 +84,24 @@
 
 <!-- SOBRE MÍ -->
 <section id="sobre-mi">
-  <p class="section-label fade-in">01 // sobre_mi</p>
-  <h2 class="fade-in"><span class="mask">¿Quién soy?</span></h2>
+  <p class="section-label fade-in" data-en="01 // about_me">01 // sobre_mi</p>
+  <h2 class="fade-in"><span class="mask" data-en="Who am I?">¿Quién soy?</span></h2>
   <div class="about-grid">
     <div class="about-text fade-in">
       <div class="status-badge"><span class="dot"></span>open to work</div>
-      <p>Soy estudiante de Ingeniería en Sistemas, apasionado por el desarrollo de software y la tecnología. Me interesa especialmente el desarrollo backend con Java y bases de datos, aunque también disfruto crear interfaces web modernas y dinámicas.</p>
-      <p>Trabajé con tecnologías como Java, Spring Boot, PostgreSQL, HTML, CSS y JavaScript, además de herramientas como Git y GitHub. También en proyectos de redes e infraestructura, realizando configuración de dispositivos y de conectividad.</p>
-      <p>Además, cuento con conocimientos en metodologías ágiles como Scrum, comprendiendo dinámicas de trabajo colaborativo, organización de tareas y desarrollo dentro de equipos de trabajo.</p>
-      <p>Me considero una persona comprometida, con ganas de seguir aprendiendo constantemente y enfrentar nuevos desafíos tecnológicos, buscando siempre mejorar mis habilidades.</p>
-      <a href="#contacto" class="btn btn-ghost about-cta">contactarme →</a>
+      <p data-en="I'm a Systems Engineering student passionate about software development and technology. I'm especially interested in backend development with Java and databases, though I also enjoy building modern, dynamic web interfaces.">Soy estudiante de Ingeniería en Sistemas, apasionado por el desarrollo de software y la tecnología. Me interesa especialmente el desarrollo backend con Java y bases de datos, aunque también disfruto crear interfaces web modernas y dinámicas.</p>
+      <p data-en="I've worked with technologies such as Java, Spring Boot, PostgreSQL, HTML, CSS, and JavaScript, as well as tools like Git and GitHub. I've also worked on networking and infrastructure projects, configuring devices and connectivity.">Trabajé con tecnologías como Java, Spring Boot, PostgreSQL, HTML, CSS y JavaScript, además de herramientas como Git y GitHub. También en proyectos de redes e infraestructura, realizando configuración de dispositivos y de conectividad.</p>
+      <p data-en="I also have knowledge of agile methodologies such as Scrum, including collaborative work dynamics, task organization, and development within teams.">Además, cuento con conocimientos en metodologías ágiles como Scrum, comprendiendo dinámicas de trabajo colaborativo, organización de tareas y desarrollo dentro de equipos de trabajo.</p>
+      <p data-en="I consider myself a committed person, eager to keep learning and take on new technological challenges, always looking to improve my skills.">Me considero una persona comprometida, con ganas de seguir aprendiendo constantemente y enfrentar nuevos desafíos tecnológicos, buscando siempre mejorar mis habilidades.</p>
+      <a href="#contacto" class="btn btn-ghost about-cta" data-en="contact me →">contactarme →</a>
     </div>
     <ul class="info-list fade-in">
-      <li><span class="key">ubicación</span><span class="val">Argentina 🇦🇷</span></li>
-      <li><span class="key">perfil</span><span class="val">junior · proyectos propios</span></li>
-      <li><span class="key">especialidad</span><span class="val">Backend Developer (Java)</span></li>
-      <li><span class="key">stack</span><span class="val">Java</span></li>
-      <li><span class="key">disponibilidad</span><span class="val">freelance / fulltime</span></li>
-      <li><span class="key">idiomas</span><span class="val">ES / EN</span></li>
+      <li><span class="key" data-en="location">ubicación</span><span class="val">Argentina 🇦🇷</span></li>
+      <li><span class="key" data-en="profile">perfil</span><span class="val" data-en="junior · own projects">junior · proyectos propios</span></li>
+      <li><span class="key" data-en="specialty">especialidad</span><span class="val">Backend Developer (Java)</span></li>
+      <li><span class="key" data-en="stack">stack</span><span class="val">Java</span></li>
+      <li><span class="key" data-en="availability">disponibilidad</span><span class="val">freelance / fulltime</span></li>
+      <li><span class="key" data-en="languages">idiomas</span><span class="val">ES / EN</span></li>
     </ul>
   </div>
 </section>
@@ -105,20 +110,20 @@
 
 <!-- HABILIDADES -->
 <section id="habilidades">
-  <p class="section-label fade-in">02 // habilidades</p>
-  <h2 class="fade-in"><span class="mask">Stack técnico</span></h2>
-  <p class="skills-intro fade-in">Herramientas que uso en mis proyectos, en la facultad y en los cursos de IA, ordenadas por categoría.</p>
+  <p class="section-label fade-in" data-en="02 // skills">02 // habilidades</p>
+  <h2 class="fade-in"><span class="mask" data-en="Tech stack">Stack técnico</span></h2>
+  <p class="skills-intro fade-in" data-en="Tools I use in my projects, at university, and in AI courses, organized by category.">Herramientas que uso en mis proyectos, en la facultad y en los cursos de IA, ordenadas por categoría.</p>
   <div class="skills-list">
     <div class="skill-group fade-in">
-      <div class="skill-group-label">lenguajes</div>
+      <div class="skill-group-label" data-en="languages">lenguajes</div>
       <div class="skill-group-items">Java · JavaScript · Python · SQL</div>
     </div>
     <div class="skill-group fade-in">
-      <div class="skill-group-label">frameworks</div>
+      <div class="skill-group-label" data-en="frameworks">frameworks</div>
       <div class="skill-group-items">Spring Boot</div>
     </div>
     <div class="skill-group fade-in">
-      <div class="skill-group-label">bases de datos</div>
+      <div class="skill-group-label" data-en="databases">bases de datos</div>
       <div class="skill-group-items">PostgreSQL</div>
     </div>
     <div class="skill-group fade-in">
@@ -126,16 +131,16 @@
       <div class="skill-group-items">HTML · CSS · APIs REST</div>
     </div>
     <div class="skill-group fade-in">
-      <div class="skill-group-label">herramientas</div>
+      <div class="skill-group-label" data-en="tools">herramientas</div>
       <div class="skill-group-items">Git · GitHub · Docker · Scrum</div>
     </div>
     <div class="skill-group fade-in">
       <div class="skill-group-label">cloud</div>
-      <div class="skill-group-items">AWS <span class="skill-group-note">conocimientos básicos</span></div>
+      <div class="skill-group-items">AWS <span class="skill-group-note" data-en="basic knowledge">conocimientos básicos</span></div>
     </div>
     <!-- Categoría destacada: ocupa el ancho completo de la grilla -->
     <div class="skill-group skill-group--wide fade-in">
-      <div class="skill-group-label">ia &amp; agentes</div>
+      <div class="skill-group-label" data-en="ai &amp; agents">ia &amp; agentes</div>
       <div class="skill-group-items"> AI-Assisted Development · Context Engineering · Harness Engineering · MCP (Servers & Tools) · AI Coding Agents & Skills · CLI Tools & Commands · Spec-Driven Development (SDD)</div>
     </div>
   </div>
@@ -145,15 +150,15 @@
 
 <!-- PROYECTOS -->
 <section id="proyectos">
-  <p class="section-label fade-in">03 // proyectos</p>
-  <h2 class="fade-in"><span class="mask">Lo que construí</span></h2>
+  <p class="section-label fade-in" data-en="03 // projects">03 // proyectos</p>
+  <h2 class="fade-in"><span class="mask" data-en="What I've built">Lo que construí</span></h2>
   <div class="projects-list">
     <!-- proyecto con enlaces: se pueden agregar más <a> dentro de .project-links -->
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 1</div>
-      <h3 class="project-title">BarberTrend AI - Sistema para Barbería</h3>
-      <div class="project-desc">Desarrollé un sistema web de reservas online para una barbería masculina real: un sitio público responsive con servicios, precios, galería, horarios y contacto, más un motor de turnos que consulta la disponibilidad real y registra las reservas contra una API REST. El backend, en Java y Spring Boot, valida los datos en el servidor y previene turnos duplicados mediante clave compuesta. Incluye un panel administrativo privado con login para confirmar, completar y cancelar turnos y cerrar días o franjas horarias, además de seguridad con Spring Security, migraciones con Flyway, notificaciones por email y enlaces de WhatsApp con el mensaje de confirmación prearmado.</div>
-      <p class="project-note"><strong>Segunda etapa:</strong> un asistente de marketing con IA, planificado pero todavía no implementado.</p>
+      <div class="project-num" data-en="project 1">proyecto 1</div>
+      <h3 class="project-title" data-en="BarberTrend AI - Barbershop System">BarberTrend AI - Sistema para Barbería</h3>
+      <div class="project-desc" data-en="I built an online booking web system for a real men's barbershop: a responsive public site with services, prices, a gallery, opening hours, and contact details, plus a booking engine that checks real availability and records reservations against a REST API. The backend, built with Java and Spring Boot, validates data on the server and prevents duplicate bookings through a composite key. It includes a private admin panel with login to confirm, complete, and cancel bookings and close days or time slots, along with Spring Security, Flyway migrations, email notifications, and WhatsApp links with a pre-filled confirmation message.">Desarrollé un sistema web de reservas online para una barbería masculina real: un sitio público responsive con servicios, precios, galería, horarios y contacto, más un motor de turnos que consulta la disponibilidad real y registra las reservas contra una API REST. El backend, en Java y Spring Boot, valida los datos en el servidor y previene turnos duplicados mediante clave compuesta. Incluye un panel administrativo privado con login para confirmar, completar y cancelar turnos y cerrar días o franjas horarias, además de seguridad con Spring Security, migraciones con Flyway, notificaciones por email y enlaces de WhatsApp con el mensaje de confirmación prearmado.</div>
+      <p class="project-note"><strong data-en="Second stage:">Segunda etapa:</strong> <span data-en="an AI marketing assistant, planned but not yet implemented.">un asistente de marketing con IA, planificado pero todavía no implementado.</span></p>
       <div class="tags">
         <span class="tag">Java</span>
         <span class="tag">Spring Boot</span>
@@ -167,30 +172,30 @@
         <span class="tag">GitHub Actions</span>
       </div>
       <div class="project-links">
-        <a class="project-link" href="https://github.com/1Nahuu/barbertrend-ai" target="_blank" rel="noopener noreferrer">ver código</a>
+        <a class="project-link" href="https://github.com/1Nahuu/barbertrend-ai" target="_blank" rel="noopener noreferrer" data-en="view code">ver código</a>
       </div>
     </article>
 
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 2</div>
-      <h3 class="project-title">Sistema Web para Regalería Paris</h3>
-      <div class="project-desc">Desarrollé un sistema web orientado a la gestión y visualización de productos para una regalería. El proyecto incluye una interfaz moderna realizada con HTML, CSS y JavaScript, junto con lógica backend en Java. Trabajé en la estructura de navegación, diseño responsive y organización de productos, buscando mejorar la experiencia del usuario y facilitar la administración del emprendimiento.</div>
+      <div class="project-num" data-en="project 2">proyecto 2</div>
+      <h3 class="project-title" data-en="Web System for Regalería Paris">Sistema Web para Regalería Paris</h3>
+      <div class="project-desc" data-en="I developed a web system for managing and displaying products for a gift shop. The project includes a modern interface built with HTML, CSS, and JavaScript, along with backend logic in Java. I worked on the navigation structure, responsive design, and product organization, aiming to improve the user experience and make running the business easier.">Desarrollé un sistema web orientado a la gestión y visualización de productos para una regalería. El proyecto incluye una interfaz moderna realizada con HTML, CSS y JavaScript, junto con lógica backend en Java. Trabajé en la estructura de navegación, diseño responsive y organización de productos, buscando mejorar la experiencia del usuario y facilitar la administración del emprendimiento.</div>
       <div class="tags">
         <span class="tag">Java</span>
         <span class="tag">HTML/CSS</span>
         <span class="tag">PostgreSQL</span>
       </div>
       <div class="project-links">
-        <a class="project-link" href="https://1nahuu.github.io/RegaleriaWeb/frontend/Principal.html" target="_blank" rel="noopener noreferrer">ver demo</a>
-        <a class="project-link" href="https://github.com/1Nahuu/RegaleriaWeb" target="_blank" rel="noopener noreferrer">ver código</a>
+        <a class="project-link" href="https://1nahuu.github.io/RegaleriaWeb/frontend/Principal.html" target="_blank" rel="noopener noreferrer" data-en="view demo">ver demo</a>
+        <a class="project-link" href="https://github.com/1Nahuu/RegaleriaWeb" target="_blank" rel="noopener noreferrer" data-en="view code">ver código</a>
       </div>
     </article>
 
     <!-- proyectos sin enlace: agregar .project-links cuando haya repo o demo -->
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 3</div>
-      <h3 class="project-title">Portfolio Web Personal</h3>
-      <div class="project-desc">Desarrollé un portfolio web personal con el objetivo de presentar mis proyectos, habilidades y conocimientos en desarrollo de software. El sitio fue diseñado utilizando HTML, CSS y JavaScript, priorizando una interfaz moderna, responsive y dinámica.</div>
+      <div class="project-num" data-en="project 3">proyecto 3</div>
+      <h3 class="project-title" data-en="Personal Web Portfolio">Portfolio Web Personal</h3>
+      <div class="project-desc" data-en="I developed a personal web portfolio to showcase my projects, skills, and knowledge of software development. The site was designed with HTML, CSS, and JavaScript, prioritizing a modern, responsive, and dynamic interface.">Desarrollé un portfolio web personal con el objetivo de presentar mis proyectos, habilidades y conocimientos en desarrollo de software. El sitio fue diseñado utilizando HTML, CSS y JavaScript, priorizando una interfaz moderna, responsive y dinámica.</div>
       <div class="tags">
         <span class="tag">HTML/CSS</span>
         <span class="tag">JavaScript</span>
@@ -198,9 +203,9 @@
     </article>
 
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 4</div>
-      <h3 class="project-title">Sistema de Gestión de Comprobantes y Clientes</h3>
-      <div class="project-desc">Realicé un proyecto enfocado en el manejo de comprobantes, clientes y servicios utilizando PostgreSQL. Implementé consultas SQL avanzadas y Triggers para optimizar la administración de datos y mejorar la eficiencia en las operaciones.</div>
+      <div class="project-num" data-en="project 4">proyecto 4</div>
+      <h3 class="project-title" data-en="Receipt and Customer Management System">Sistema de Gestión de Comprobantes y Clientes</h3>
+      <div class="project-desc" data-en="I completed a project focused on managing receipts, customers, and services using PostgreSQL. I implemented advanced SQL queries and triggers to optimize data management and improve operational efficiency.">Realicé un proyecto enfocado en el manejo de comprobantes, clientes y servicios utilizando PostgreSQL. Implementé consultas SQL avanzadas y Triggers para optimizar la administración de datos y mejorar la eficiencia en las operaciones.</div>
       <div class="tags">
         <span class="tag">PostgreSQL</span>
         <span class="tag">SQL</span>
@@ -209,9 +214,9 @@
     </article>
 
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 5</div>
-      <h3 class="project-title">Proyecto 24hs de Innovación</h3>
-      <div class="project-desc">Participé en el evento 24hs de Innovación, trabajando en equipo para desarrollar una propuesta tecnológica dentro de un tiempo limitado. Durante el proyecto participé en la planificación y desarrollo del prototipo de una aplicación orientada a mejorar la comunicación interna de una PyME, diseñando la estructura y funcionalidades principales de la solución. </div>
+      <div class="project-num" data-en="project 5">proyecto 5</div>
+      <h3 class="project-title" data-en="24-Hour Innovation Project">Proyecto 24hs de Innovación</h3>
+      <div class="project-desc" data-en="I took part in the 24-Hour Innovation event, working in a team to develop a technology proposal within a limited time. During the project, I helped plan and develop the prototype of an app aimed at improving internal communication at a small business, designing the solution's structure and core features.">Participé en el evento 24hs de Innovación, trabajando en equipo para desarrollar una propuesta tecnológica dentro de un tiempo limitado. Durante el proyecto participé en la planificación y desarrollo del prototipo de una aplicación orientada a mejorar la comunicación interna de una PyME, diseñando la estructura y funcionalidades principales de la solución. </div>
       <div class="tags">
         <span class="tag">Backend</span>
         <span class="tag">Frontend</span>
@@ -219,13 +224,13 @@
     </article>
 
     <article class="project-card fade-in">
-      <div class="project-num">proyecto 6</div>
-      <h3 class="project-title">Proyecto de Infraestructura y Redes</h3>
-      <div class="project-desc">Participé en el diseño y organización de una infraestructura de red en la secundaria, contemplando switches, redes WiFi, servidores y segmentación de dispositivos. También trabajé en la configuración de dispositivos de red, incluyendo routers, switches y asignación de direcciones IP, aplicando conceptos de conectividad, administración y optimización de la red.</div>
+      <div class="project-num" data-en="project 6">proyecto 6</div>
+      <h3 class="project-title" data-en="Infrastructure and Networking Project">Proyecto de Infraestructura y Redes</h3>
+      <div class="project-desc" data-en="I took part in designing and organizing a network infrastructure at my high school, including switches, Wi-Fi networks, servers, and device segmentation. I also worked on configuring network devices, including routers, switches, and IP address assignment, applying concepts of connectivity, administration, and network optimization.">Participé en el diseño y organización de una infraestructura de red en la secundaria, contemplando switches, redes WiFi, servidores y segmentación de dispositivos. También trabajé en la configuración de dispositivos de red, incluyendo routers, switches y asignación de direcciones IP, aplicando conceptos de conectividad, administración y optimización de la red.</div>
       <div class="tags">
-        <span class="tag">Diseño de infraestructura</span>
-        <span class="tag">Segmentación de red</span>
-        <span class="tag">Servidores y WiFi</span>
+        <span class="tag" data-en="Infrastructure design">Diseño de infraestructura</span>
+        <span class="tag" data-en="Network segmentation">Segmentación de red</span>
+        <span class="tag" data-en="Servers &amp; WiFi">Servidores y WiFi</span>
         <span class="tag">IPv4 / IPv6</span>
       </div>
     </article>
@@ -236,60 +241,60 @@
 
 <!-- FORMACIÓN -->
 <section id="formacion">
-  <p class="section-label fade-in">04 // formación</p>
-  <h2 class="fade-in"><span class="mask">Formación</span></h2>
+  <p class="section-label fade-in" data-en="04 // education">04 // formación</p>
+  <h2 class="fade-in"><span class="mask" data-en="Education">Formación</span></h2>
   <div class="formacion-grid">
     <article class="formacion-card fade-in">
-      <div class="formacion-kicker">universidad</div>
+      <div class="formacion-kicker" data-en="university">universidad</div>
       <h3 class="formacion-title">Ingeniería en Sistemas</h3>
       <div class="formacion-place">Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)</div>
-      <div class="formacion-note">5to año en curso</div>
+      <div class="formacion-note" data-en="5th year in progress">5to año en curso</div>
     </article>
     <article class="formacion-card fade-in">
-      <div class="formacion-kicker">secundaria técnica</div>
+      <div class="formacion-kicker" data-en="technical high school">secundaria técnica</div>
       <h3 class="formacion-title">Técnico en Informática</h3>
       <div class="formacion-place">Orientación Persona y Profesional</div>
-      <div class="formacion-note">egresado</div>
+      <div class="formacion-note" data-en="graduated">egresado</div>
     </article>
   </div>
 
-  <p class="formacion-subtitulo fade-in">Cursos de inteligencia artificial · BIG School</p>
+  <p class="formacion-subtitulo fade-in" data-en="Artificial intelligence courses · BIG School">Cursos de inteligencia artificial · BIG School</p>
   <div class="formacion-grid">
     <article class="formacion-card fade-in">
-      <div class="formacion-kicker">curso</div>
+      <div class="formacion-kicker" data-en="course">curso</div>
       <h3 class="formacion-title">Prompt Engineering para desarrolladores</h3>
       <ul class="curso-temas">
-        <li>Diseñar prompts técnicos para obtener código de calidad en minutos.</li>
-        <li>Definir proyectos con el apoyo de un equipo de expertos de IA.</li>
-        <li>Automatizar procesos de programación con herramientas de inteligencia artificial.</li>
+        <li data-en="Design technical prompts to get quality code in minutes.">Diseñar prompts técnicos para obtener código de calidad en minutos.</li>
+        <li data-en="Define projects with the support of a team of AI experts.">Definir proyectos con el apoyo de un equipo de expertos de IA.</li>
+        <li data-en="Automate programming processes with artificial intelligence tools.">Automatizar procesos de programación con herramientas de inteligencia artificial.</li>
       </ul>
       <div class="formacion-meta">
-        <span class="formacion-cert">Certificado: Curso de Iniciación al Desarrollo con IA</span>
-        <a class="curso-link" href="certificados/1760024408730.jpg" target="_blank" rel="noopener noreferrer">ver certificado</a>
+        <span class="formacion-cert" data-en="Certificate: Curso de Iniciación al Desarrollo con IA">Certificado: Curso de Iniciación al Desarrollo con IA</span>
+        <a class="curso-link" href="certificados/1760024408730.jpg" target="_blank" rel="noopener noreferrer" data-en="view certificate">ver certificado</a>
       </div>
     </article>
     <article class="formacion-card fade-in">
-      <div class="formacion-kicker">curso</div>
+      <div class="formacion-kicker" data-en="course">curso</div>
       <h3 class="formacion-title">Desarrollo con IA: de O a Producción</h3>
       <ul class="curso-temas">
-        <li>Fundamentos de LLMs y su aplicación en el desarrollo de software.</li>
-        <li>Flujos de trabajo con agentes de IA.</li>
-        <li>Prácticas de CI/CD para llevar proyectos a producción de forma segura.</li>
+        <li data-en="Fundamentals of LLMs and their application in software development.">Fundamentos de LLMs y su aplicación en el desarrollo de software.</li>
+        <li data-en="Workflows with AI agents.">Flujos de trabajo con agentes de IA.</li>
+        <li data-en="CI/CD practices to take projects to production safely.">Prácticas de CI/CD para llevar proyectos a producción de forma segura.</li>
       </ul>
       <div class="formacion-meta">
-        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-t332qt3b_page-0001.jpg" target="_blank" rel="noopener noreferrer">ver certificado</a>
+        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-t332qt3b_page-0001.jpg" target="_blank" rel="noopener noreferrer" data-en="view certificate">ver certificado</a>
       </div>
     </article>
     <article class="formacion-card fade-in">
-      <div class="formacion-kicker">curso</div>
+      <div class="formacion-kicker" data-en="course">curso</div>
       <h3 class="formacion-title">El Nuevo Programador</h3>
       <ul class="curso-temas">
-        <li>Programar con criterio y metodologías profesionales, más allá del vibe coding.</li>
-        <li>SDD y CDD: desarrollo basado en especificaciones para evitar alucinaciones del modelo.</li>
-        <li>MCP, Agent Skills y orquestación multiagente (planificador, implementador y revisor).</li>
+        <li data-en="Programming with judgment and professional methodologies, beyond vibe coding.">Programar con criterio y metodologías profesionales, más allá del vibe coding.</li>
+        <li data-en="SDD and CDD: specification-driven development to avoid model hallucinations.">SDD y CDD: desarrollo basado en especificaciones para evitar alucinaciones del modelo.</li>
+        <li data-en="MCP, Agent Skills, and multi-agent orchestration (planner, implementer, and reviewer).">MCP, Agent Skills y orquestación multiagente (planificador, implementador y revisor).</li>
       </ul>
       <div class="formacion-meta">
-        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-cd7ebo4b_page-0001.jpg" target="_blank" rel="noopener noreferrer">ver certificado</a>
+        <a class="curso-link" href="certificados/Certificado-Nahuel-Vailati-cd7ebo4b_page-0001.jpg" target="_blank" rel="noopener noreferrer" data-en="view certificate">ver certificado</a>
       </div>
     </article>
   </div>
@@ -299,23 +304,23 @@
 
 <!-- CONTACTO -->
 <section id="contacto">
-  <p class="section-label fade-in">05 // contacto</p>
-  <h2 class="fade-in"><span class="mask">Hablemos</span></h2>
+  <p class="section-label fade-in" data-en="05 // contact">05 // contacto</p>
+  <h2 class="fade-in"><span class="mask" data-en="Let's talk">Hablemos</span></h2>
   <div class="contact-inner fade-in">
-    <h3 class="contact-title">¿Tenés un proyecto en mente?</h3>
-    <p class="contact-text">Estoy disponible para proyectos freelance, posiciones full-time y colaboraciones interesantes. Si tenés una idea, escribime.</p>
+    <h3 class="contact-title" data-en="Do you have a project in mind?">¿Tenés un proyecto en mente?</h3>
+    <p class="contact-text" data-en="I'm available for freelance projects, full-time positions, and interesting collaborations. If you have an idea, get in touch.">Estoy disponible para proyectos freelance, posiciones full-time y colaboraciones interesantes. Si tenés una idea, escribime.</p>
     <a href="mailto:nahuelvailati@gmail.com" class="btn btn-primary contact-email">nahuelvailati@gmail.com</a>
     <div class="contact-links">
       <a href="https://github.com/1Nahuu" target="_blank" rel="noopener noreferrer" class="contact-link">github</a>
       <a href="https://www.linkedin.com/in/nahuel-vailati-706a27226/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin</a>
       <a href="https://wa.link/9pmgxb" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp</a>
-      <a href="CV_Nahuel_Vailati_.6f.pdf" download="CV Nahuel Vailati.pdf" class="contact-link">descargar cv</a>
+      <a href="CV_Nahuel_Vailati_.6f.pdf" download="CV Nahuel Vailati.pdf" class="contact-link" data-en="download cv">descargar cv</a>
     </div>
   </div>
 </section>
 
 <footer>
-  construido con <span>♥</span> · 2026
+  <span class="footer-text" data-en="built with">construido con</span> <span class="heart">♥</span> · 2026
 </footer>
 
 <script src="app.js"></script>

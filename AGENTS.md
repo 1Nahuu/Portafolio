@@ -59,7 +59,7 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 
 ## Convenciones de código
 
-- Los textos de la interfaz deben estar en español, salvo nombres propios de tecnologías y términos técnicos habituales.
+- El español es el idioma base de la interfaz. Todo texto visible debe tener su equivalente en inglés en el atributo `data-en`; el cambio se aplica desde `app.js`.
 - Usar nombres descriptivos para clases, variables y funciones.
 - Mantener HTML, CSS y JavaScript separados en sus respectivos archivos.
 - Escribir código legible y apropiado para un desarrollador principiante.
@@ -68,6 +68,15 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 - No modificar partes funcionales sin una razón concreta.
 - No incluir información personal sensible ni credenciales en el código.
 - Las categorías de habilidades usan todas el mismo formato de lista en texto (`·`); una categoría destacada puede ocupar el ancho completo de la grilla, sin agregar descripciones por ítem.
+
+## Contenido bilingüe
+
+- La página es español/inglés con un selector ES/EN siempre visible en el nav, también en móvil. El español es el idioma por defecto.
+- El contenido debe seguir siendo legible en español si `app.js` no se carga.
+- El inglés vive en `data-en` sobre elementos hoja. No usar `data-en` en elementos con hijos ni `innerHTML` para traducir.
+- `app.js` actualiza `<html lang>`, `aria-pressed`, `<title>`, `meta description` y `og:*`, y guarda la preferencia en `localStorage` con `try/catch`.
+- No incorporar librerías de i18n, `fetch`, módulos ni páginas duplicadas. Los IDs y hashes de sección no se traducen.
+- Los nombres oficiales (UNICEN, títulos de grado, cursos y certificados) se mantienen en español; se traduce el texto que los rodea.
 
 ## Contenido y perfil profesional
 
@@ -126,6 +135,7 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 - Después de cada cambio, abrir `index.html` en el navegador y comprobar que la página se visualice correctamente.
 - Revisar la consola del navegador para detectar errores de JavaScript.
 - Probar los enlaces, botones, navegación y demás interacciones implementadas.
+- Probar ES→EN→ES, la recarga con la preferencia guardada, el uso con teclado y que el indicador del nav se reacomode.
 - Verificar la vista móvil y los tamaños de pantalla más habituales.
 - Comprobar que no existan errores de diseño, desbordamientos horizontales ni textos ilegibles.
 - Si está disponible MCP de Chrome DevTools, utilizarlo para inspeccionar la página, revisar errores y probar la vista responsive.

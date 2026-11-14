@@ -2,92 +2,53 @@
 
 ## Estado
 
-- Web estática: `index.html` + `style.css` + `app.js`. Funciona con doble clic (`file://`).
-- Diseño: **secciones con tarjetas**, tipografías Syne (títulos) y JetBrains Mono
-  (etiquetas), paleta oscura con acento verde.
-- Habilidades: 6 tarjetas chicas + **1 tarjeta ancha** (`--wide`) de "ia & agentes"
-  con el mismo formato de texto (`·`) que las demás.
-- Se intentó un rediseño editorial (tipo dossier, sin tarjetas, barra lateral lateral)
-  el [fecha de esta sesión] y **no fue del agrado del usuario: se volvió atrás**.
-  No volver a proponer esa dirección sin que la pida explícitamente.
-- El sitio **no depende de JS para leerse**: nada arranca en `opacity:0` sin la clase
-  `js`, que agrega una línea en el `<head>`.
-- **Sistema de movimiento** (agregado a pedido del usuario): la web se comporta como
-  un programa arrancando. Ver la sección "Movimiento" más abajo.
+- Web estática `index.html` + `style.css` + `app.js`; funciona con doble clic (`file://`).
+- Diseño de tarjetas, Syne + JetBrains Mono y paleta oscura con acento verde; habilidades en 6 tarjetas + 1 ancha.
+- El sitio no depende de JS para leerse: `app.js` marca `portafolioListo`; si falla, el `<head>` quita `js` a los 1,5 s.
+- Se probó un rediseño editorial sin tarjetas y no gustó: no volver a proponerlo sin pedido explícito.
+
+## Idioma
+
+- Español base en el HTML; inglés en `data-en` (solo elementos hoja) y aplicado por `app.js`.
+- Selector ES/EN siempre visible en el nav, también en móvil. Clave: `portafolio-idioma`; por defecto `es`.
+- Al cambiar: `<html lang>`, `aria-pressed`, título, meta description, `og:*` y `alDesplazar()`.
+- Nombres oficiales (UNICEN, títulos, cursos y certificados) quedan en español.
+- El selector no funciona sin JS; la página sigue siendo legible en español.
 
 ## Movimiento
 
-- Concepto: "arranque de compilación". El hero se escribe letra por letra con cursor
-  de terminal, los títulos se revelan con máscara, las separaciones se dibinan, el nav
-  marca la sección actual y el avance de lectura.
-- **Regla clave: `clip-path` y `scaleX(0)` encogen el elemento, y el
-  IntersectionObserver deja de detectarlo.** Por eso la máscara de los `h2` va en un
-  `<span class="mask">` interno y las separaciones se dibujan con `background-size`,
-  no con `transform`. Si se olvida, el contenido queda invisible.
-- Los revelados usan `animation` (no `transition`) para no pisar las transiciones
-  propias de cada tarjeta al pasar el cursor.
-- El stagger se logra con `--n` (índice dentro del grupo) que asigna `app.js`.
-- Todo respeta `prefers-reduced-motion`: se apagan animaciones y transiciones, y el
-  contenido queda en su estado final.
-- `app.js` pone `window.portafolioListo = true`; si no carga, el `<head>` quita la
-  clase `js` a los 1,5 s para que la web se lea igual.
-
+- Concepto "arranque de compilación": hero escrito con cursor, títulos con máscara, nav con sección activa y avance de lectura.
+- `clip-path` y `scaleX(0)` encogen el elemento y el IntersectionObserver deja de verlo: la máscara va en `.mask` interno y las separaciones usan `background-size`.
+- Revelados con `animation`; stagger con `--n`. Todo respeta `prefers-reduced-motion`.
 
 ## Decisiones que no hay que revertir
 
-- **Paleta solo negro + verde.** Está escrito en `AGENTS.md`.
-- Contraste: todo el texto cumple AA. `--muted` es `#9b9bb2`; sobre el verde claro se
-  usa texto oscuro (`--btn-text`), nunca blanco. El hover del botón aclara el verde
-  (`--accent-hover`): oscurecerlo daba 3.5:1.
-- Habilidades **sin barras de porcentaje** (autoinventario). Lista agrupada por
-  categoría (`.skill-group`); AWS lleva la nota "conocimientos básicos".
-- La tarjeta de IA va **última y ancha** (`grid-column:1/-1`), con el mismo formato
-  de lista que las otras categorías; sin RAG ni Agentic Workflows (no tienen respaldo
-  en los cursos) y sin notas de nivel.
-- Proyectos **no son enlaces**: son `<article>` con los enlaces adentro
-  (`.project-links`), para poder tener demo y repo sin anidar `<a>`.
-- Formación en dos rejillas: títulos (universidad + secundaria) y los 3 cursos.
-- Sin estilos inline en el HTML. La única línea de JS inline es la del `<head>`.
+- Paleta solo negro + verde (regla en `AGENTS.md`).
+- Contraste AA: `--muted:#9b9bb2`; sobre verde, texto oscuro `--btn-text`; hover con `--accent-hover`.
+- Habilidades sin porcentajes; AWS con "conocimientos básicos". IA última y ancha.
+- Proyectos son `<article>` con enlaces adentro (`.project-links`), no tarjetas enlazadas.
+- Formación en dos rejillas: títulos y cursos. Sin estilos inline en el HTML.
 
 ## Perfil y datos reales
 
-- Estudiante de 5to año de Ingeniería en Sistemas (UNICEN); egresado de Técnico en
-  Informática, orientación Persona y Profesional. Sin experiencia laboral: se presenta
-  como junior con proyectos propios. Especialidad: Backend Developer (Java).
-- Cursos de BIG School, cada uno con su certificado en `certificados/`: Prompt
-  Engineering para desarrolladores (el certificado real dice "Curso de Iniciación al
-  Desarrollo con IA", se aclara abajo), "De O a Producción" y "El Nuevo Programador".
-- Proyecto 1 = **BarberTrend AI** (reservas para barbería, Java/Spring Boot): repo
-  `github.com/1Nahuu/barbertrend-ai`, sin demo. Descripción resumida en
-  `.project-desc`, sin pruebas ni lista de features (pedido del usuario). La segunda
-  etapa de IA va aparte en un `p.project-note` (borde verde + "Segunda etapa:" en
-  negrita) y se aclara que está planificada, no implementada.
-- Proyecto 2 (Regalería Paris) tiene demo y repo en GitHub, ambos verificados.
-- CV que se descarga: `CV_Nahuel_Vailati_.6f.pdf`; el "1.4" es viejo.
+- 5to año de Ingeniería en Sistemas (UNICEN); Técnico en Informática, orientación Persona y Profesional.
+- Sin experiencia laboral: junior con proyectos propios. Especialidad: Backend Developer (Java).
+- Cursos BIG School con certificados en `certificados/`: Prompt Engineering, "De O a Producción" y "El Nuevo Programador".
+- Proyecto 1: BarberTrend AI (Java/Spring Boot, repo `1Nahuu/barbertrend-ai`); la etapa de IA está planificada, no implementada.
+- Proyecto 2: Regalería Paris, demo y repo verificados.
+- CV descargable: `CV_Nahuel_Vailati_.6f.pdf`; el "1.4" es viejo.
 
 ## Errores a evitar
 
-- Si se cambia un color, recalcular contraste antes de dar por bueno.
-- No usar `#00470A` ni violetas como color de texto: eran ilegibles (1.7:1).
-- No volver a poner `style="..."` en el HTML.
-- **No encoger con `clip-path`, `scaleX(0)` ni `width:0` el elemento que el
-  IntersectionObserver tiene que detectar.** Es la causa clásica de "quedó invisible".
-- **Cuidado con el atajo `background:`**: resetea `background-image` y borra los
-  barridos de luz de los botones. Usar `background-color:`.
-- Cuidado con el atajo `animation:`: reemplaza la animación anterior del elemento.
-  Si un elemento ya rebotaba, listar las dos animaciones separadas por coma.
-- Los certificados venían con RunLengthDecode (8-9 MB). Ya se recomprimieron a
-  FlateDecode (~280 KB) verificando que las imágenes son idénticas. Si se vuelven a
-  descargar de BIG School, repetir el procedimiento.
-- **Ya hay git** (últimos commits: `cec0343`, `dd5ffb0`). Antes de una reescritura
-  grande, commitear primero para poder volver atrás.
+- Recalcular contraste si se cambia un color. No usar `#00470A` ni violetas como texto.
+- No volver a poner `style="..."`; no encoger con `clip-path`, `scaleX(0)` ni `width:0` lo que debe detectar el IntersectionObserver.
+- Cuidado con los atajos `background:` y `animation:`: pisan imágenes o animaciones existentes.
+- No poner `data-en` en elementos con hijos ni usar `innerHTML`; recalcular el nav tras cambiar idioma.
+- Certificados recomprimidos a FlateDecode; si se descargan de nuevo, repetir el procedimiento.
+- Commitear antes de una reescritura grande (ya hay git).
 
 ## Pendientes
 
-- [ ] Enlaces de los proyectos 3 a 6 (los pega el usuario).
-- [ ] Navegación móvil: en ≤680px el menú del nav se oculta y no hay alternativa.
-- [ ] Enlace "saltar al contenido".
-- [ ] Achicar `icono.png` (775 KB) y `2.jpg` (183 KB).
-- [ ] Borrar los dos CV viejos y poner el año del footer dinámico.
-
-Mantener breve. Las reglas permanentes van en `AGENTS.md`.
+- [ ] Revisar la redacción inglesa y decidir si se traducen los nombres oficiales.
+- [ ] Enlaces de los proyectos 3 a 6; navegación móvil sin alternativa en ≤680 px.
+- [ ] Enlace "saltar al contenido"; achicar imágenes; borrar CV viejos; año del footer dinámico.

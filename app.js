@@ -182,3 +182,111 @@ function alDesplazar() {
 window.addEventListener('scroll', alDesplazar, {passive: true});
 window.addEventListener('resize', alDesplazar, {passive: true});
 alDesplazar();
+
+// ============================================================
+// 7. Selector de idioma (español / inglés)
+// ============================================================
+// El español vive en el HTML y el inglés en el atributo data-en.
+// Así la página se puede leer aunque el JavaScript no se cargue.
+const CLAVE_IDIOMA = 'portafolio-idioma';
+
+const TITULO_PAGINA = {
+  es: 'Nahuel Vailati — Desarrollador Backend Java',
+  en: 'Nahuel Vailati — Backend Java Developer'
+};
+
+const DESCRIPCION_PAGINA = {
+  es: 'Portafolio de Nahuel Vailati, estudiante de Ingeniería en Sistemas orientado al desarrollo backend con Java, Spring Boot y PostgreSQL. Proyectos, habilidades y contacto.',
+  en: 'Portfolio of Nahuel Vailati, a Systems Engineering student focused on backend development with Java, Spring Boot, and PostgreSQL. Projects, skills, and contact details.'
+};
+
+const NOMBRE_SITIO = {
+  es: 'Portafolio de Nahuel Vailati',
+  en: 'Nahuel Vailati Portfolio'
+};
+
+// Se guarda el texto original de cada elemento para poder volver al español.
+const textosTraducibles = Array.from(document.querySelectorAll('[data-en]')).map(elemento => ({
+  elemento,
+  textoEspanol: elemento.textContent
+}));
+
+const selectorIdioma = document.getElementById('lang-switch');
+const botonesIdioma = selectorIdioma
+  ? Array.from(selectorIdioma.querySelectorAll('[data-idioma]'))
+  : [];
+const metaDescripcion = document.querySelector('meta[name="description"]');
+
+function leerIdiomaGuardado() {
+  try {
+    const guardado = localStorage.getItem(CLAVE_IDIOMA);
+    return guardado === 'es' || guardado === 'en' ? guardado : null;
+  } catch (error) {
+    // Algunos navegadores bloquean localStorage en file:// o en modo privado.
+    return null;
+  }
+}
+
+function guardarIdioma(idioma) {
+  try {
+    localStorage.setItem(CLAVE_IDIOMA, idioma);
+  } catch (error) {
+    // Si no se puede guardar, el cambio funciona igual durante esta visita.
+  }
+}
+
+function aplicarIdioma(idioma) {
+  const idiomaFinal = idioma === 'en' ? 'en' : 'es';
+  document.documentElement.lang = idiomaFinal;
+
+  textosTraducibles.forEach(({elemento, textoEspanol}) => {
+    if (idiomaFinal === 'en' && elemento.hasAttribute('data-en')) {
+      elemento.textContent = elemento.getAttribute('data-en');
+    } else {
+      elemento.textContent = textoEspanol;
+    }
+  });
+
+  botonesIdioma.forEach(boton => {
+    boton.setAttribute('aria-pressed', boton.dataset.idioma === idiomaFinal ? 'true' : 'false');
+  });
+
+  if (selectorIdioma) {
+    selectorIdioma.setAttribute(
+      'aria-label',
+      idiomaFinal === 'en' ? 'Page language' : 'Idioma de la página'
+    );
+  }
+
+  document.title = TITULO_PAGINA[idiomaFinal];
+
+  if (metaDescripcion) {
+    metaDescripcion.setAttribute('content', DESCRIPCION_PAGINA[idiomaFinal]);
+  }
+
+  const ogTitulo = document.querySelector('meta[property="og:title"]');
+  const ogDescripcion = document.querySelector('meta[property="og:description"]');
+  const ogSitio = document.querySelector('meta[property="og:site_name"]');
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+
+  if (ogTitulo) ogTitulo.setAttribute('content', TITULO_PAGINA[idiomaFinal]);
+  if (ogDescripcion) ogDescripcion.setAttribute('content', DESCRIPCION_PAGINA[idiomaFinal]);
+  if (ogSitio) ogSitio.setAttribute('content', NOMBRE_SITIO[idiomaFinal]);
+  if (ogLocale) ogLocale.setAttribute('content', idiomaFinal === 'en' ? 'en_US' : 'es_AR');
+
+  // Los enlaces del nav cambian de ancho al traducirse:
+  // hay que volver a medir el indicador y el resto del scroll.
+  alDesplazar();
+}
+
+if (selectorIdioma) {
+  botonesIdioma.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const idioma = boton.dataset.idioma;
+      guardarIdioma(idioma);
+      aplicarIdioma(idioma);
+    });
+  });
+
+  aplicarIdioma(leerIdiomaGuardado() || 'es');
+}
