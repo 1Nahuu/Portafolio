@@ -36,7 +36,7 @@
 - Cursos BIG School con certificados en `certificados/`: Prompt Engineering, "De O a Producción" y "El Nuevo Programador".
 - Proyecto 1: BarberTrend AI (Java/Spring Boot, repo `1Nahuu/barbertrend-ai`); la etapa de IA está planificada, no implementada.
 - Proyecto 2: Regalería Paris, demo y repo verificados.
-- CV descargable: `CV_Nahuel_Vailati_.6f.pdf`; el "1.4" es viejo.
+- CV descargable: `CV_Nahuel_Vailati_V7.pdf` (ES) y `CV_Nahuel_Vailati_V7EN.pdf` (EN); el enlace `#cv-link` cambia de archivo y de nombre de descarga al cambiar de idioma. Los CV viejos (1.4 y .6) se borraron.
 
 ## Errores a evitar
 
@@ -51,4 +51,4 @@
 
 - [ ] Revisar la redacción inglesa y decidir si se traducen los nombres oficiales.
 - [ ] Enlaces de los proyectos 3 a 6; navegación móvil sin alternativa en ≤680 px.
-- [ ] Enlace "saltar al contenido"; achicar imágenes; borrar CV viejos; año del footer dinámico.
+- [ ] Enlace "saltar al contenido"; achicar imágenes; año del footer dinámico.

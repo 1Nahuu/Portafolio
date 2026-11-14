@@ -25,7 +25,8 @@ portafolio/
 ├── 2.jpg                       # Foto de perfil
 ├── icono.png                   # Favicon
 ├── certificados/               # Certificados de cursos
-├── CV_Nahuel_Vailati_.6f.pdf   # CV descargable
+├── CV_Nahuel_Vailati_V7.pdf     # CV descargable (ES)
+├── CV_Nahuel_Vailati_V7EN.pdf   # CV descargable (EN)
 └── README.md                   # Documentación del proyecto
 ```
 

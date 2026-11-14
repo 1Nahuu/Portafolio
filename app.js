@@ -211,6 +211,16 @@ const textosTraducibles = Array.from(document.querySelectorAll('[data-en]')).map
   textoEspanol: elemento.textContent
 }));
 
+// El CV tiene una versión en cada idioma: el enlace cambia según el idioma activo.
+const enlaceCV = document.getElementById('cv-link');
+
+function actualizarEnlaceCV(idioma) {
+  if (!enlaceCV) return;
+  const esIngles = idioma === 'en';
+  enlaceCV.href = esIngles ? enlaceCV.dataset.cvEn : enlaceCV.dataset.cvEs;
+  enlaceCV.setAttribute('download', esIngles ? enlaceCV.dataset.nombreEn : enlaceCV.dataset.nombreEs);
+}
+
 const selectorIdioma = document.getElementById('lang-switch');
 const botonesIdioma = selectorIdioma
   ? Array.from(selectorIdioma.querySelectorAll('[data-idioma]'))
@@ -250,6 +260,8 @@ function aplicarIdioma(idioma) {
   botonesIdioma.forEach(boton => {
     boton.setAttribute('aria-pressed', boton.dataset.idioma === idiomaFinal ? 'true' : 'false');
   });
+
+  actualizarEnlaceCV(idiomaFinal);
 
   if (selectorIdioma) {
     selectorIdioma.setAttribute(
