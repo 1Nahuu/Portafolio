@@ -23,8 +23,8 @@ El diseño debe transmitir profesionalismo, claridad y una orientación hacia el
 
 - **Inicio:** nombre, presentación breve, perfil como desarrollador y botones para explorar proyectos o contactarme.
 - **Sobre mí:** estudiante del último año de Ingeniería en Sistemas en la Universidad Nacional del Centro de la Provincia de Buenos Aires. Interés en el desarrollo de software, aprendizaje continuo y búsqueda de mi primera oportunidad laboral en tecnología.
-- **Habilidades técnicas:** Java, Spring Boot, SQL, PostgreSQL, APIs REST, HTML, CSS, JavaScript, Python, Git, GitHub, Docker y conocimientos de AWS. Incluir una categoría de IA y desarrollo agéntico (Prompt Engineering, AI-Assisted Development, AI Coding Agents, Context Engineering, Harness, MCP, Agent Skills, CLI Tools, SDD). Mostrar las tecnologías de forma clara, sin exagerar el nivel de experiencia y sin declarar niveles que el usuario no haya indicado.
-- **Proyectos:** mostrar proyectos académicos y personales con nombre, descripción, tecnologías utilizadas, funcionalidades principales y enlaces disponibles a GitHub o a una demo. Cada proyecto muestra su año en la línea `proyecto N · 2026` (solo el año, salvo que se indique el mes) y se ordenan del más nuevo al más viejo.
+- **Habilidades técnicas:** Java, Spring Boot, Rasa (chatbots), SQL, PostgreSQL, APIs REST, HTML, CSS, JavaScript, Python, Git, GitHub, Docker y conocimientos de AWS. Incluir una categoría de IA y desarrollo agéntico (Prompt Engineering, AI-Assisted Development, AI Coding Agents, Context Engineering, Harness, MCP, Agent Skills, CLI Tools, SDD). Mostrar las tecnologías de forma clara, sin exagerar el nivel de experiencia y sin declarar niveles que el usuario no haya indicado.
+- **Proyectos:** mostrar proyectos académicos y personales con nombre, descripción, tecnologías utilizadas, funcionalidades principales y enlaces disponibles a GitHub o a una demo. Cada proyecto muestra su año en la línea `proyecto N · 2026` (solo el año, salvo que se indique el mes) y se ordenan del más nuevo al más viejo. Puede incluir documentación descargable; antes de publicarla, revisar que no exponga tokens, credenciales, rutas locales ni datos de terceros.
 - **Formación:** carrera universitaria, cursos y certificaciones relevantes. Cada curso muestra mes y año en el kicker (`curso · octubre 2026`), tomados del certificado, y se ordenan del más nuevo al más viejo. El mes se traduce con `data-en` en el kicker; el año no. El título se escribe como figura en el certificado ("de 0 a Producción").
 - **Contacto:** enlaces a LinkedIn, GitHub y correo electrónico, utilizando los datos reales que proporcione el usuario.
 
@@ -68,6 +68,7 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 - No modificar partes funcionales sin una razón concreta.
 - No incluir información personal sensible ni credenciales en el código.
 - Las categorías de habilidades usan todas el mismo formato de lista en texto (`·`); una categoría destacada puede ocupar el ancho completo de la grilla, sin agregar descripciones por ítem.
+- Los enlaces a documentación local usan `.project-link`, abren en pestaña nueva y no dependen de `download`, que no es fiable en `file://`.
 
 ## Contenido bilingüe
 
@@ -83,7 +84,7 @@ Estas secciones son la estructura inicial. No inventar información, proyectos, 
 - Presentar el perfil como estudiante de Ingeniería en Sistemas orientado al desarrollo de software.
 - Dar prioridad a los proyectos que demuestren conocimientos prácticos.
 - Destacar Java, Spring Boot, PostgreSQL y APIs REST cuando corresponda.
-- Diferenciar claramente los conocimientos, los proyectos académicos y la experiencia profesional.
+- Diferenciar claramente los conocimientos, los proyectos académicos y la experiencia profesional. Si un proyecto es académico, indicarlo en una nota dentro de la tarjeta.
 - Utilizar descripciones concretas de las funcionalidades implementadas y los problemas resueltos.
 - No afirmar que una tecnología se domina profesionalmente si el usuario no lo ha indicado.
 - No inventar métricas, resultados, clientes, empresas ni años de experiencia.

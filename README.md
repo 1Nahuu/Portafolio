@@ -24,7 +24,7 @@ portafolio/
 ├── app.js                      # Interacciones de la interfaz
 ├── 2.jpg                       # Foto de perfil
 ├── icono.png                   # Favicon
-├── certificados/               # Certificados de cursos
+├── certificados/               # Certificados y documentación
 ├── CV_Nahuel_Vailati_V7.pdf     # CV descargable (ES)
 ├── CV_Nahuel_Vailati_V7EN.pdf   # CV descargable (EN)
 └── README.md                   # Documentación del proyecto
@@ -47,7 +47,7 @@ Las tipografías se cargan desde Google Fonts. Si no hay conexión a Internet, e
 | Inicio | Presentación, perfil y accesos directos. |
 | Sobre mí | Presentación personal, ubicación y especialidad. |
 | Habilidades | Lenguajes, frameworks, bases de datos, desarrollo web, cloud e IA. |
-| Proyectos | Cinco proyectos con descripciones y enlaces. |
+| Proyectos | Siete proyectos con descripciones y enlaces disponibles. |
 | Formación | Universidad, secundaria técnica y cursos de IA. |
 | Contacto | Correo electrónico, GitHub, LinkedIn y CV descargable. |
 
@@ -58,7 +58,7 @@ Las habilidades se organizan en tarjetas por categorías, sin utilizar porcentaj
 Las categorías incluidas son:
 
 - **Lenguajes:** Java, JavaScript, Python y SQL.
-- **Backend:** Spring Boot.
+- **Frameworks:** Spring Boot y Rasa (chatbots).
 - **Bases de datos:** PostgreSQL.
 - **Desarrollo web:** HTML, CSS y APIs REST.
 - **Herramientas y metodologías:** Git, GitHub, Docker y Scrum.
@@ -91,7 +91,9 @@ La categoría de IA y agentes ocupa el ancho completo y reúne conocimientos rel
 Los cursos cuentan con sus respectivos certificados, disponibles en la sección de formación.
 
 **Proyectos destacados:**
+- BarberTrend AI (Java/Spring Boot).
 - Regalería París.
+- Chatbot para Telegram (Rasa, Telegram, ngrok).
 - Portfolio Web Personal.
 - Sistema de Gestión de Comprobantes y Clientes.
 - Proyecto 24hs de Innovación.
