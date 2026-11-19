@@ -33,9 +33,9 @@
 
 - 5to año de Ingeniería en Sistemas (UNICEN); Técnico en Informática, orientación Persona y Profesional.
 - Sin experiencia laboral: junior con proyectos propios. Especialidad: Backend Developer (Java).
-- Cursos BIG School con certificados en `certificados/`: Prompt Engineering, "De O a Producción" y "El Nuevo Programador".
-- Proyecto 1: BarberTrend AI (Java/Spring Boot, repo `1Nahuu/barbertrend-ai`); la etapa de IA está planificada, no implementada.
-- Proyecto 2: Regalería Paris, demo y repo verificados.
+- Cursos BIG School, más nuevo primero: El Nuevo Programador (oct 2026), De 0 a Producción (mar 2026), Prompt Engineering (oct 2025). Fecha tomada del certificado y visible en el kicker; certificados en `certificados/`.
+- Proyecto 1 (2026): BarberTrend AI (Java/Spring Boot, repo `1Nahuu/barbertrend-ai`); la etapa de IA está planificada, no implementada.
+- Proyecto 2 (2025): Regalería Paris, demo y repo verificados. Proyectos 3 a 6, con año en `proyecto N · año`: Portfolio (2024), Comprobantes (2022), 24hs (2019), Infraestructura (2019).
 - CV descargable: `CV_Nahuel_Vailati_V7.pdf` (ES) y `CV_Nahuel_Vailati_V7EN.pdf` (EN); el enlace `#cv-link` cambia de archivo y de nombre de descarga al cambiar de idioma. Los CV viejos (1.4 y .6) se borraron.
 
 ## Errores a evitar

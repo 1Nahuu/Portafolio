@@ -24,8 +24,8 @@ El diseño debe transmitir profesionalismo, claridad y una orientación hacia el
 - **Inicio:** nombre, presentación breve, perfil como desarrollador y botones para explorar proyectos o contactarme.
 - **Sobre mí:** estudiante del último año de Ingeniería en Sistemas en la Universidad Nacional del Centro de la Provincia de Buenos Aires. Interés en el desarrollo de software, aprendizaje continuo y búsqueda de mi primera oportunidad laboral en tecnología.
 - **Habilidades técnicas:** Java, Spring Boot, SQL, PostgreSQL, APIs REST, HTML, CSS, JavaScript, Python, Git, GitHub, Docker y conocimientos de AWS. Incluir una categoría de IA y desarrollo agéntico (Prompt Engineering, AI-Assisted Development, AI Coding Agents, Context Engineering, Harness, MCP, Agent Skills, CLI Tools, SDD). Mostrar las tecnologías de forma clara, sin exagerar el nivel de experiencia y sin declarar niveles que el usuario no haya indicado.
-- **Proyectos:** mostrar proyectos académicos y personales con nombre, descripción, tecnologías utilizadas, funcionalidades principales y enlaces disponibles a GitHub o a una demo.
-- **Formación:** carrera universitaria, cursos y certificaciones relevantes.
+- **Proyectos:** mostrar proyectos académicos y personales con nombre, descripción, tecnologías utilizadas, funcionalidades principales y enlaces disponibles a GitHub o a una demo. Cada proyecto muestra su año en la línea `proyecto N · 2026` (solo el año, salvo que se indique el mes) y se ordenan del más nuevo al más viejo.
+- **Formación:** carrera universitaria, cursos y certificaciones relevantes. Cada curso muestra mes y año en el kicker (`curso · octubre 2026`), tomados del certificado, y se ordenan del más nuevo al más viejo. El mes se traduce con `data-en` en el kicker; el año no. El título se escribe como figura en el certificado ("de 0 a Producción").
 - **Contacto:** enlaces a LinkedIn, GitHub y correo electrónico, utilizando los datos reales que proporcione el usuario.
 
 Estas secciones son la estructura inicial. No inventar información, proyectos, certificaciones, experiencia laboral ni enlaces. Si falta algún dato, dejar un lugar claramente identificable para completarlo.
